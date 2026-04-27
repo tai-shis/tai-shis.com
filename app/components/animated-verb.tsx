@@ -20,7 +20,7 @@ export default function AnimatedVerb({ verb }: { verb: string }) {
   useEffect(() => {
     if (phase !== "typing") return;
     if (charCount >= verb.length) {
-      const t = setTimeout(() => { setPhase("scanning"); setScanPos(0); setScanDir(1); }, 500);
+      const t = setTimeout(() => { setPhase("scanning"); setScanPos(0); setScanDir(1); }, 400);
       return () => clearTimeout(t);
     }
     const t = setTimeout(() => setCharCount((c) => c + 1), 40);
