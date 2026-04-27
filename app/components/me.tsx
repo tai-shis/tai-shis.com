@@ -1,22 +1,13 @@
 "use client";
 
-import figlet from "figlet";
 import { GraduationCap, MapPin, CodeXml } from "lucide-react";
 import Panel from "@/app/components/panel";
 import { randomVerb } from "@/app/lib/verbs";
 import AnimatedVerb from "@/app/components/animated-verb";
 import { useEffect, useState } from "react";
 
-export default function Me() {
-  const [text, setText] = useState("");
+export default function Me({ asciiText }: { asciiText: string }) {
   const [verb, setVerb] = useState(randomVerb());
-
-  useEffect(() => {
-    figlet.defaults({ fontPath: "https://unpkg.com/figlet/fonts" });
-    figlet.text("tai-shis", { font: "Standard" }, (err, result) => {
-      if (!err && result) setText(result);
-    });
-  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,7 +19,7 @@ export default function Me() {
   return (
     <Panel name="me" className="flex flex-col sm:flex-row items-center sm:items-start gap-1">
       <pre className="text-foreground leading-tight text-xs font-mono shrink-0 p-2 sm:pb-2 pb-0 ">
-        {text}
+        {asciiText}
       </pre>
       <div className="flex-1 min-w-0 p-2 sm:pt-2 pt-0  text-sm text-muted flex flex-col gap-1 items-center sm:items-start self-center">
         <p className="flex items-center gap-2">
