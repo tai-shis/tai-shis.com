@@ -3,7 +3,7 @@
 import { GraduationCap, MapPin, CodeXml } from "lucide-react";
 import Panel from "@/app/components/panel";
 import { randomVerb } from "@/app/lib/verbs";
-import AnimatedVerb from "@/app/components/animated-verb";
+import AnimatedVerb from "@/app/components/home/animated-verb";
 import { useEffect, useState } from "react";
 
 export default function Me({ asciiText }: { asciiText: string }) {
@@ -15,7 +15,7 @@ export default function Me({ asciiText }: { asciiText: string }) {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-  
+
   return (
     <Panel name="me" className="flex flex-col sm:flex-row items-center sm:items-start gap-1">
       <pre className="text-foreground leading-tight text-xs font-mono shrink-0 p-2 sm:pb-2 pb-0 ">

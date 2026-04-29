@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaDiscord} from "react-icons/fa";
 import Panel from "@/app/components/panel";
-import CopyButton from "@/app/components/copy-button";
+import CopyButton from "@/app/components/home/copy-button";
 
 const links = [
   { href: "https://github.com/tai-shis", icon: <FaGithub size={14} />, label: "GitHub" },

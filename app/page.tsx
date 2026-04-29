@@ -1,8 +1,8 @@
 import figlet from "figlet";
-import About from "./components/about";
-import Me from "./components/me";
-import Socials from "./components/socials";
-import Propaganda from "./components/propaganda";
+import About from "./components/home/about";
+import Me from "./components/home/me";
+import Socials from "./components/home/socials";
+import Propaganda from "./components/home/propaganda";
 
 export default function Home() {
   const asciiText = figlet.textSync("tai-shis", { font: "Standard" });
