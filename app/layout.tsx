@@ -38,7 +38,7 @@ const aberMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "tai-shis.com",
+  title: "tai-shis | Tai Shishiba - Software Developer",
   description: "",
 };
 

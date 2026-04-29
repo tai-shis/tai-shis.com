@@ -21,11 +21,17 @@ export default function Footer() {
   const commitURL = commit ? `https://github.com/tai-shis/tai-shis.com/commit/${commit}` : '';
 
   return (
-    <Panel name="footer" className="flex items-center justify-between px-4 py-2 text-sm text-muted">
+    <Panel name="footer" className="flex items-center px-4 py-2 text-sm text-muted relative">
       <span className="p-2">© 2026 - tai-shis</span>
-      <a href={commitURL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors p-2 flex flex-row items-center justify-center gap-1">
+      <a href={commitURL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors p-2 flex flex-row items-center justify-center gap-1 ml-auto">
         <GitPullRequest size={16}/> {shortCommit ?? "—"}
       </a>
+      <span className="absolute bottom-0 left-3 translate-y-1/2 bg-background px-1.5 text-muted text-xs font-mono transition-colors group-hover:text-border-accent hidden sm:block">
+        [0: Home | 1: Projects | 2: Resume | 3: Hobbies]
+      </span>
+      <span className="absolute bottom-0 right-3 translate-y-1/2 bg-background px-1.5 text-muted text-xs font-mono transition-colors group-hover:text-border-accent hidden sm:block">
+        [←/→ Scroll]
+      </span>
     </Panel>
   );
 }
