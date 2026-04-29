@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 interface ImagePreviewProps {
   images: string[];
@@ -51,7 +52,7 @@ export default function ImagePreview({ images }: ImagePreviewProps) {
         ))}
       </div>
 
-      {selected && (
+      {selected && createPortal(
         <div
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-background/90"
           onClick={close}
@@ -67,7 +68,8 @@ export default function ImagePreview({ images }: ImagePreviewProps) {
               className="max-w-[90vw] max-h-[90vh] object-contain"
             />
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

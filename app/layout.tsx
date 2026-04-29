@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Space_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import Footer from "@/app/components/footer";
-import Nav from "@/app/components/nav";
+import Shell from "@/app/components/shell";
+import HomeSlide from "@/app/components/home/home-slide";
+import VendorReports from "@/app/components/projects/vendor-reports";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -40,11 +42,7 @@ export const metadata: Metadata = {
   description: "",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
@@ -52,10 +50,12 @@ export default function RootLayout({
     >
       <body className="h-full overflow-hidden flex flex-col">
         <div className="w-full max-w-3xl mx-auto flex flex-col h-full px-4 py-8 gap-4">
-          <Nav />
-          <div className="flex-1 overflow-y-auto min-h-0 pt-1 no-scrollbar">
-            {children}
-          </div>
+          <Shell>
+            <HomeSlide />
+            <VendorReports />
+            <div />
+            <div />
+          </Shell>
           <Footer />
         </div>
       </body>
