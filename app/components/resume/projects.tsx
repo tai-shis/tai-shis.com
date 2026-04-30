@@ -51,8 +51,8 @@ const projects = [
 
 export default function Projects() {
   return (
-    <Panel name="projects">
-      <div className="px-2 pt-1 flex flex-col text-sm">
+    <Panel name="projects" className="p-4 relative">
+      <div className="px-2 flex flex-col text-sm">
         {projects.map((p, i) => (
           <div key={p.title}>
             {i > 0 && <Divider />}

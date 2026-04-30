@@ -18,8 +18,8 @@ const education = [
 
 export default function Education() {
   return (
-    <Panel name="education">
-      <div className="px-2 pt-1 flex flex-col text-sm">
+    <Panel name="education" className="p-4 relative">
+      <div className="px-2 flex flex-col text-sm">
         {education.map((e, i) => (
           <div key={e.institution}>
             {i > 0 && <Divider />}

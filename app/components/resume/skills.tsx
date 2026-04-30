@@ -12,8 +12,8 @@ const skills: { label: string; items: Item[] }[] = [
 
 export default function Skills() {
   return (
-    <Panel name="technical-skills">
-      <div className="px-2 pt-1 flex flex-col gap-2 text-sm">
+    <Panel name="technical-skills" className="p-4 relative">
+      <div className="px-2 flex flex-col gap-2 text-sm">
         {skills.map(({ label, items }) => (
           <div key={label} className="flex gap-3 items-start">
             <span className="text-muted group-hover:text-accent transition-colors font-bold w-24 shrink-0 pt-0.5">{label}</span>

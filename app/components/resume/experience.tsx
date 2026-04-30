@@ -17,8 +17,8 @@ const experience = [
 
 export default function Experience() {
   return (
-    <Panel name="experience">
-      <div className="px-2 pt-1 flex flex-col text-sm">
+    <Panel name="experience" className="p-4 relative">
+      <div className="px-2 flex flex-col text-sm">
         {experience.map((e, i) => (
           <div key={e.title}>
             {i > 0 && <Divider />}
